@@ -12,14 +12,14 @@ public class socket1 {
     public static String uploadPath = "D:/odh/socket1/";
 
     public static void main(String[] args) {
-        // 1초 간격 실행 위해 Timer 사용
+        // 반복 실행 위해 Timer 사용
         Timer random = new Timer();
         random.schedule(new TimerTask() {
             @Override
             public void run() {
                 randomSave(); // 랜덤숫자 생성 후 저장
             }
-        }, 0, 1000);
+        }, 0, 100);
 
         Timer socket = new Timer();
         socket.schedule(new TimerTask() {
